@@ -1,12 +1,12 @@
-/* t19.css */
+/* t19_grid1.css */
 body {
   margin: 0;
   font-size: 0.8em;
 }
 .container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  gap: 10px;
+  grid-template-columns: auto auto auto auto auto;  /* 5개 열을 균등하게 배치 */
+  gap: 3px; /* 항목간의 갭은 3px씩 반영한다. */
 }
 
 .item {
@@ -14,9 +14,15 @@ body {
   text-align: center;
 }
 
-.item2 {
-  grid-column: 2 / span 3;
-}
+
+/* item2는 2열에서 시작해서 3개열을 합친다. */
+.item2 { grid-column: 2 / span 3; }
+
+/* item14는 1열에서 시작해서 5개열을 합친다. */
+.item14 { grid-column: 1 / span 5; }
+
+/* item15는 1열에서 시작해서 5개열을 합친다. */
+.item15 { grid-column: 1 / span 5; }
 
 .item1 {background-color: antiquewhite;}
 .item2 {background-color: aqua;}
